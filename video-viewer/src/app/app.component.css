@@ -1,0 +1,14 @@
+.page-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+span {
+    padding: 20px;
+}
+
+.search-bar, .video-view, .bookmarks {
+    padding: 20px;
+}
