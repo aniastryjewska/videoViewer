@@ -1,20 +1,18 @@
-import {Component} from "@angular/core";
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-    selector: 'History',
-    templateUrl: './History.component.html'
+  selector: 'app-history',
+  templateUrl: './history.component.html',
+  styleUrls: ['./history.component.css']
 })
+export class HistoryComponent implements OnInit {
+  
+  @Input() videosHistory;
 
-export class HistoryComponent {
-   videosHistory = [
-   {
-       "id":1,
-       "title": "first video"
-    },
-    {
-        "id":2,
-        "title": "second video"
-     }
-   ]
+ 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }

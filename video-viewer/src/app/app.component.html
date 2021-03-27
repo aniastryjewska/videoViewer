@@ -3,11 +3,11 @@
 
 <div class="page-body"> 
     <span>
-        <History></History>
+        <app-history [videosHistory]="videosHistory"></app-history>
     </span>
     <span class="videoViewer-main">
-       <searchBar class="search-bar"></searchBar>
-       <videoView class="video-view"></videoView>
+       <app-search-bar class="search-bar" [videosHistory]="videosHistory"></app-search-bar>
+       <app-videoview class="video-view"></app-videoview>
        <Bookmarks class="bookmarks"></Bookmarks>
     </span>
     
