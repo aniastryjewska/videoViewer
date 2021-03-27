@@ -1,8 +1,15 @@
-import {Component} from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'Bookmarks',
-    templateUrl: './Bookmarks.component.html'
+  selector: 'app-bookmarks',
+  templateUrl: './bookmarks.component.html',
+  styleUrls: ['./bookmarks.component.css']
 })
+export class BookmarksComponent implements OnInit {
 
-export class BookmarksComponent {}
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}

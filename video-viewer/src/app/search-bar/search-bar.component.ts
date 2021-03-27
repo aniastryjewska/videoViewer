@@ -8,6 +8,7 @@ import { Component, Input, OnInit} from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   @Input() videosHistory;
+  @Input() currentVideoID: string;
   newVideoLink:string = "";
 
   constructor() { }
@@ -15,14 +16,14 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-playAndAddVideo () {
+addVideoToHistory () {
 
-
-
+this.currentVideoID = this.newVideoLink;
+console.log(this.currentVideoID)
 
  this.videosHistory.push({
     id: "PLACEHOLDER",
-    title: "PLACEHOLDER"
+    title: this.newVideoLink
   });
 
   console.log(this.videosHistory)

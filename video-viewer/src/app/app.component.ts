@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
+  currentVideoID:string = "Pd98NIR63cU";
+
   videosHistory = [
     {
         "id":1,

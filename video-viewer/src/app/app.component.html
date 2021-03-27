@@ -6,9 +6,9 @@
         <app-history [videosHistory]="videosHistory"></app-history>
     </span>
     <span class="videoViewer-main">
-       <app-search-bar class="search-bar" [videosHistory]="videosHistory"></app-search-bar>
-       <app-videoview class="video-view"></app-videoview>
-       <Bookmarks class="bookmarks"></Bookmarks>
+       <app-search-bar class="search-bar" [videosHistory]="videosHistory" [currentVideoID]="currentVideoID"></app-search-bar>
+       <app-videoview [currentVideoID]="currentVideoID" class="video-view"></app-videoview>
+       <app-bookmarks class="bookmarks"></app-bookmarks>
     </span>
     
 </div>
