@@ -1,11 +1,11 @@
 <div>
-    <form (submit)="addVideoToHistory()">
-    <input 
-    type="url" 
-    name="youtube-link" 
+    <form #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+    <input  
+    type="url"  
+    name="link"
     placeholder="enter youtube video link"
-    [(ngModel)]="newVideoLink"
+    [ngModel]="video.link"
     />
     <input type="submit" value="Play video">
     </form>
-    </div> 
+ </div>  

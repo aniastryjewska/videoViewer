@@ -7,12 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HistoryComponent implements OnInit {
   
-  @Input() videosHistory;
+  @Input() videos;
 
  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  play() {
+
   }
 
 }

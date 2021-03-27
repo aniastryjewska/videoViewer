@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VideoLink } from 'src/shared/models/video-link-model';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-  currentVideoID:string = "Pd98NIR63cU";
+ 
 
-  videosHistory = [
-    {
-        "id":1,
-        "title": "first video"
-     },
-     {
-         "id":2,
-         "title": "second video"
-      }
-    ]
+  videos: VideoLink[] = new Array<VideoLink>();
+
+  
+addVideo(newVideo: VideoLink){
+ this.videos.push(newVideo);
+ console.log(this.videos)
+// localStorage.setItem(`${newVideo.link}`, newVideo.link)
+localStorage.setItem("History", JSON.stringify(this.videos));
+}
 
   title = 'video-viewer';
 }

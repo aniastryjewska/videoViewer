@@ -1,8 +1,8 @@
 <div class="history">
     <h3>History</h3>
     <ul>
-        <li *ngFor="let video of videosHistory">
-            {{video.title}}
+        <li *ngFor="let video of videos" (click)="play(video.link)">
+            {{video.link}}
         </li>
     </ul>
 </div>  

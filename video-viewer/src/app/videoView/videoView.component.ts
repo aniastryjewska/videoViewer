@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./videoview.component.css']
 })
 export class VideoviewComponent implements OnInit {
-@Input() currentVideoID: string;
 
+@Input() videos;
 
   constructor() { }
 
