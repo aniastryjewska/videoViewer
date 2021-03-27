@@ -20,6 +20,9 @@ export class SearchBarComponent implements OnInit {
 onSubmit (form: NgForm) {
  console.log(form)
  this.formSubmit.emit(form.value);
+ this.video.link = "";
+
+ //console.log("This is video link:", this.video.link)
 }
 
 }
