@@ -9,13 +9,14 @@ import { VideoLink } from 'src/shared/models/video-link-model';
 export class AppComponent {
   
   videos: VideoLink[] = new Array<VideoLink>();
-
+  newVideoID: string
+  bookmarks: string[] = []
   
 addVideo(newVideo: VideoLink){
   console.log(newVideo)
 
   //extracting youtube videoID from different formats of  youtube links
-  let newVideoID = youtube_parser(newVideo.link)
+  this.newVideoID = youtube_parser(newVideo.link)
   
   function youtube_parser(url){
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
@@ -23,11 +24,11 @@ addVideo(newVideo: VideoLink){
     return (match&&match[7].length==11)? match[7] : false;
 }
 
-newVideo.link = newVideoID
+newVideo.link = this.newVideoID
 
  this.videos.push(newVideo);
  console.log(this.videos)
-// localStorage.setItem(`${newVideo.link}`, newVideo.link)
+// adding to local storage
 localStorage.setItem("History", JSON.stringify(this.videos));
 
 }

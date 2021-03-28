@@ -1,3 +1,8 @@
 <div>
-    <button>Bookmark video</button>
+    <button (click)="bookmarkVideo()">Bookmark video</button>
+    <button (click)="showBookmarks()">Show bookmarks</button>
+    <div *ngIf="!isShow">
+        <div *ngFor="let bookmark of bookmarks">
+        {{bookmark}}
+    </div> </div>
 </div>

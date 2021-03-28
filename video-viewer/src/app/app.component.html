@@ -8,7 +8,7 @@
     <span class="videoViewer-main">
        <app-search-bar class="search-bar" (formSubmit)="addVideo($event)" ></app-search-bar>
        <app-videoview [videos]="videos" class="video-view"></app-videoview>
-       <app-bookmarks class="bookmarks"></app-bookmarks>
+       <app-bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks"></app-bookmarks>
     </span>
     
 </div>

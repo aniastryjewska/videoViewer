@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bookmarks',
@@ -6,12 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bookmarks.component.css']
 })
 export class BookmarksComponent implements OnInit {
+  
+  isShow = true;
 
- 
+  @Input() newVideoID;
+  @Input() bookmarks;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+bookmarkVideo() {
+ 
+  this.bookmarks.push(this.newVideoID)
+  console.log(this.bookmarks)
+  localStorage.setItem("Bookmarks", JSON.stringify(this.bookmarks));
+}
+
+
+showBookmarks() {
+this.isShow = !this.isShow
+}
 
 }
