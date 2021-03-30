@@ -10,12 +10,25 @@ export class AppComponent {
 
   videos: VideoLink[] = new Array<VideoLink>();
   newVideoID: string
-  bookmarks: string[] = JSON.parse(localStorage.getItem("Bookmarks"))
+  bookmarks: string[] = JSON.parse(localStorage.getItem("Bookmarks")) || []
+  
+  bookmarksInLocalStorage = JSON.parse(localStorage.getItem("Bookmarks")) || []
+  numberOfBookmarks = this.bookmarksInLocalStorage.length
+  
+  //numberOfBookmarks = 0
+  // numberOfBookmarks = (n:number) => {
+  // if(localStorage.getItem("Bookmarks")) {
+  //    return this.numberOfBookmarks = JSON.parse(localStorage.getItem("Bookmarks")).length
+  // } else {
+  //    return this.numberOfBookmarks = 0
+  // }} 
 
-  
-  
+
+
+
 addVideo(newVideo: VideoLink){
   console.log(newVideo)
+  console.log("This is JSON.parse", JSON.parse(localStorage.getItem("Bookmarks")))
 
   //extracting youtube videoID from different formats of  youtube links
   this.newVideoID = youtube_parser(newVideo.link)

@@ -11,6 +11,7 @@ export class BookmarksComponent implements OnInit {
 
   @Input() newVideoID;
   @Input() bookmarks;
+  
 
 
   constructor() { }
@@ -19,7 +20,10 @@ export class BookmarksComponent implements OnInit {
   }
 
 bookmarkVideo() {
- 
+  if(localStorage.getItem("Bookmarks")) {
+    this.bookmarks = JSON.parse(localStorage.getItem("Bookmarks"))
+  }
+  console.log(this.bookmarks)
   this.bookmarks.push(this.newVideoID)
   console.log(this.bookmarks)
   localStorage.setItem("Bookmarks", JSON.stringify(this.bookmarks));
@@ -30,11 +34,6 @@ bookmarkVideo() {
 showBookmarks() {
 this.isShow = !this.isShow
 }
-
-// showNumberOfBookmarked() {
-//   console.log("5555")
-// //   let Bookmarked = localStorage.getItem("Bookmarks")
-// }
 
 
 }
