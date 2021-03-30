@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
 }
 
 span {
@@ -11,4 +11,22 @@ span {
 
 .search-bar, .video-view, .bookmarks {
     padding: 40px;
+}
+
+.main-title {
+   text-align: center;
+   padding-top:40px;
+   font-size: 2.5rem;
+   color:#283593;
+   letter-spacing: 2px;
+}
+
+.heart-icon {
+    font-size: 0.7rem;
+}
+
+.footer {
+   text-align: center;
+    color: #757575;
+    padding-top:50px;
 }

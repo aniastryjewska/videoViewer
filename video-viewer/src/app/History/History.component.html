@@ -1,10 +1,12 @@
-<div class="history">
-    <mat-card>
-     <h3>Your history</h3>
+<div class="history-section">
+    <mat-card class="history-card">
+     <h2>Your history</h2>
 
-      <div class="card">
-        <mat-card *ngFor="let video of videos" (click)="play(video.link)">
-            {{video.link}}</mat-card>
+      <div>
+        <mat-card class="card" *ngFor="let video of videos" (click)="play(video.link)">
+            <mat-icon color="primary">video_library</mat-icon>
+            {{video.link}}
+        </mat-card>
       </div>
 
    </mat-card>

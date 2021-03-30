@@ -1,5 +1,4 @@
-<h1>Hi, welcome to Video Viewer!</h1> 
-<!-- <span>The number of bookmarks in your localStorage upon loading the page: {{numberOfBookmarks}}</span> -->
+<h1 class="main-title">Hi, welcome to Video Viewer! 👋</h1> 
 
 <div class="page-body"> 
     <span>
@@ -10,5 +9,7 @@
        <app-videoview [videos]="videos" class="video-view"></app-videoview>
        <app-bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks" [numberOfBookmarks]="numberOfBookmarks"></app-bookmarks>
     </span>
-    
 </div>
+<span class="footer">
+    <h5>made with <mat-icon class="heart-icon"color="accent">favorite_border</mat-icon>by Ania Stryjewska 2021</h5>
+</span>
