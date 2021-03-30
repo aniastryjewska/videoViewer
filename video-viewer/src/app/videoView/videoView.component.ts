@@ -9,9 +9,12 @@ export class VideoviewComponent implements OnInit {
 
 @Input() videos;
 
+
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
+  
 }
