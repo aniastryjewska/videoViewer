@@ -1,5 +1,5 @@
 <h1>Hi, welcome to Video Viewer!</h1> 
-<span>The number of bookmarks in your localStorage upon loading the page: {{numberOfBookmarks}}</span>
+<!-- <span>The number of bookmarks in your localStorage upon loading the page: {{numberOfBookmarks}}</span> -->
 
 <div class="page-body"> 
     <span>
@@ -8,7 +8,7 @@
     <span class="videoViewer-main">
        <app-search-bar class="search-bar" (formSubmit)="addVideo($event)" ></app-search-bar>
        <app-videoview [videos]="videos" class="video-view"></app-videoview>
-       <app-bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks"></app-bookmarks>
+       <app-bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks" [numberOfBookmarks]="numberOfBookmarks"></app-bookmarks>
     </span>
     
 </div>

@@ -11,8 +11,8 @@ export class BookmarksComponent implements OnInit {
 
   @Input() newVideoID;
   @Input() bookmarks;
+  @Input() numberOfBookmarks;
   
-
 
   constructor() { }
 
@@ -26,8 +26,12 @@ bookmarkVideo() {
   console.log(this.bookmarks)
   this.bookmarks.push(this.newVideoID)
   console.log(this.bookmarks)
+  
+  this.numberOfBookmarks = this.bookmarks.length
+
   localStorage.setItem("Bookmarks", JSON.stringify(this.bookmarks));
   console.log(localStorage.getItem("Bookmarks"))
+
 }
 
 
