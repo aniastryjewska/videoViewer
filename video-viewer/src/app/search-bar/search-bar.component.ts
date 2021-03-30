@@ -22,7 +22,6 @@ export class SearchBarComponent implements OnInit {
  this.formSubmit.emit(form.value);
  this.video.link = "";
 
- //console.log("This is video link:", this.video.link)
 }
 
 }
