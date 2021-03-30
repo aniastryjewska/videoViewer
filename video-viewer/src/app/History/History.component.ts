@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 
 @Component({
@@ -8,9 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HistoryComponent implements OnInit {
   
-  @Input() videos;
+  @Input() history;
 
- 
+  
+  
   constructor() { }
 
   ngOnInit(): void {
