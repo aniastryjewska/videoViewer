@@ -1,8 +1,11 @@
 <div class="history">
-    <h3>History</h3>
-    <ul>
-        <li *ngFor="let video of videos" (click)="play(video.link)">
-            {{video.link}}
-        </li>
-    </ul>
+    <mat-card>
+     <h3>Your history</h3>
+
+      <div class="card">
+        <mat-card *ngFor="let video of videos" (click)="play(video.link)">
+            {{video.link}}</mat-card>
+      </div>
+
+   </mat-card>
 </div>  

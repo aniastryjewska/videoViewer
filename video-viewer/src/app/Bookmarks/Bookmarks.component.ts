@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'app-bookmarks',
   templateUrl: './bookmarks.component.html',
@@ -26,7 +27,7 @@ bookmarkVideo() {
   console.log(this.bookmarks)
   this.bookmarks.push(this.newVideoID)
   console.log(this.bookmarks)
-  
+
   this.numberOfBookmarks = this.bookmarks.length
 
   localStorage.setItem("Bookmarks", JSON.stringify(this.bookmarks));

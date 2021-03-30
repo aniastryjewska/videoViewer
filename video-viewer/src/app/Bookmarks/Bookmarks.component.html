@@ -1,9 +1,13 @@
 <div>
-    <button (click)="bookmarkVideo()">Bookmark video</button>
-    <button (click)="showBookmarks()">Show bookmarks</button>
+    <button class="bookmark-button" mat-raised-button (click)="bookmarkVideo()">Bookmark video</button>
+    <button *ngIf="isShow" class="bookmark-button" mat-raised-button color="primary" (click)="showBookmarks()">Show bookmarks</button>
+    <button *ngIf="!isShow" class="bookmark-button" mat-raised-button color="primary" (click)="showBookmarks()">Hide bookmarks</button>
+    <span>No. of bookmarks in your localStorage: {{numberOfBookmarks}}</span>
     <div *ngIf="!isShow">
-        <div *ngFor="let bookmark of bookmarks">
+        <mat-card>
+            <div *ngFor="let bookmark of bookmarks" >
         {{bookmark}}
-    </div> </div>
-    <span>The number of bookmarks in your localStorage upon loading the page: {{numberOfBookmarks}}</span>
+            </div> 
+       </mat-card>
+    </div>
 </div>
