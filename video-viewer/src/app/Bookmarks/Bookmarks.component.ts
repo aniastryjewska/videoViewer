@@ -31,6 +31,7 @@ bookmarkVideo() {
   if(this.bookmarks.indexOf(this.newVideoID) !== -1) {
     this.isAlreadyBookmarked = true;
   } else {
+  this.isAlreadyBookmarked = false;
   this.bookmarks.push(this.newVideoID)
   this.numberOfBookmarks = this.bookmarks.length
  }
