@@ -38,5 +38,16 @@ addVideo(newVideo: VideoLink){
 
 }
 
+childEvent(element){
+  console.log(element)
+  
+  //updating history with the clicked element
+  this.history.push(element);
+
+  //adding updated history to localStorage
+  localStorage.setItem("History", JSON.stringify(this.history));
+}
+
+
   title = 'video-viewer';
 }

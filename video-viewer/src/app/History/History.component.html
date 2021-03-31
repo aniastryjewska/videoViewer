@@ -3,9 +3,9 @@
      <h2>Your history</h2>
 
       <div>
-        <mat-card class="card" *ngFor="let element of history" (click)="play(element.link)">
+        <mat-card class="card" *ngFor="let element of history" (click)="play(element)">
             <mat-icon color="primary">video_library</mat-icon>
-            {{element.link}}
+            <a href>{{element.link}}</a>
         </mat-card>
       </div>
 

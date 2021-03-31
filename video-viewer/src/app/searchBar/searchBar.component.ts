@@ -12,6 +12,7 @@ export class SearchBarComponent implements OnInit {
 
   @Input() video: VideoLink = new VideoLink('');
   @Output() formSubmit: EventEmitter<VideoLink> = new EventEmitter<VideoLink>()
+  
   constructor() { }
 
   ngOnInit() {

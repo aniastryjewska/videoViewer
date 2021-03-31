@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit, Input} from '@angular/core';
 export class HistoryComponent implements OnInit {
   
   @Input() history;
-
+  @Output() videoFromHistory = new EventEmitter();
   
   
   constructor() { }
@@ -17,8 +17,9 @@ export class HistoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  play() {
-
+//passing the element of history that was clicked on to the app component
+  play(element) {
+    this.videoFromHistory.emit(element)
   }
 
 }

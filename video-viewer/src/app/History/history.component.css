@@ -13,3 +13,11 @@
 .history-card {
    padding: 20px 50px;
 }
+
+a {
+   text-decoration-line: none;
+   color: black;
+}
+a:hover {
+   color: #009688;
+}

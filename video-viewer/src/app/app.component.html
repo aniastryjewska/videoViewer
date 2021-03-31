@@ -2,7 +2,7 @@
 
 <div class="page-body"> 
     <span>
-        <history [history]="history"></history>
+        <history [history]="history" (videoFromHistory)="childEvent($event)"></history>
     </span>
     <span class="videoViewer-main">
        <searchBar class="search-bar" (formSubmit)="addVideo($event)" ></searchBar>
