@@ -1,12 +1,12 @@
 <div>
-    <youtube-player *ngIf="videos.length>0"
-      videoId={{videos[videos.length-1].link}}
+    <youtube-player *ngIf="history.length>0"
+      videoId={{history[history.length-1].link}}
       suggestedQuality="highres" 
       [height]="400" 
       [width]="700">
     </youtube-player>
 
-    <div *ngIf="videos.length===0">
+    <div *ngIf="history.length===0">
         <p>Please enter a link above to play video.</p>
     </div>
     

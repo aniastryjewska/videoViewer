@@ -6,7 +6,7 @@
     </span>
     <span class="videoViewer-main">
        <searchBar class="search-bar" (formSubmit)="addVideo($event)" ></searchBar>
-       <videoView [videos]="videos" class="video-view"></videoView>
+       <videoView [history]="history" class="video-view"></videoView>
        <bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks" [numberOfBookmarks]="numberOfBookmarks"></bookmarks>
     </span>
 </div>

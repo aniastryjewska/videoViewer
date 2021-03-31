@@ -7,8 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VideoviewComponent implements OnInit {
 
-@Input() videos;
-
+@Input() history;
 
 
   constructor() { }
