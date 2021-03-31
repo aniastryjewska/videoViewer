@@ -1,16 +1,20 @@
 <div>
     <form class="example-form" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
         <mat-form-field class="example-full-width">
-            <mat-label>Your link</mat-label>
-        <input matInput 
-    type="url"  
-    name="link"
-    placeholder="enter youtube video link"
-    [ngModel]="video.link"
-    />
+            <mat-label>
+                Your link
+            </mat-label>
+               <input matInput 
+                type="url"  
+                name="link"
+                placeholder="enter youtube video link"
+               [ngModel]="video.link"
+               />
        </mat-form-field>
         
-       <button mat-raised-button color="primary" type="submit">Play video</button>
+       <button mat-raised-button color="primary" type="submit">
+           Play video
+        </button>
     </form>
  </div>  
 
