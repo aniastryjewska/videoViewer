@@ -18,6 +18,9 @@ a {
    text-decoration-line: none;
    color: black;
 }
-a:hover {
-   color: #009688;
+
+.card:hover {
+      background-color: #E8EAF6;
+      box-shadow: 0 5px #C5CAE9;
+      transform: translateY(2px);
 }

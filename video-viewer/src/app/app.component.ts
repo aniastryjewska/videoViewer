@@ -16,7 +16,6 @@ export class AppComponent {
 
 addVideo(newVideo: VideoLink){
   console.log("This is newVideo:", newVideo)
-  console.log("Result of JSON.parse:", JSON.parse(localStorage.getItem("Bookmarks")))
 
    //extracting youtube videoID from different formats of youtube links
    this.newVideoID = youtube_parser(newVideo.link)
@@ -38,16 +37,18 @@ addVideo(newVideo: VideoLink){
 }
 
 playVideoFromHistory(element){
+
   console.log(element)
   
   //updating history with the clicked element
   this.history.push(element);
 
   //updating newVideoID to enable bookmarking of the clicked element
-  element.link = this.newVideoID
+  this.newVideoID = element.link
 
   //adding updated history to localStorage
   localStorage.setItem("History", JSON.stringify(this.history));
+
 }
 
 
