@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class BookmarksComponent implements OnInit {
   
   isShow = true;
+  isAlreadyBookmarked = false;
 
   @Input() newVideoID;
   @Input() bookmarks;
@@ -21,17 +22,22 @@ export class BookmarksComponent implements OnInit {
   }
 
 bookmarkVideo() {
+  //check if bookmarks array is up to date with localStorage
   if(localStorage.getItem("Bookmarks")) {
     this.bookmarks = JSON.parse(localStorage.getItem("Bookmarks"))
   }
-  console.log(this.bookmarks)
+  
+  //check if current video is already bookmarked and bookmark if not
+  if(this.bookmarks.indexOf(this.newVideoID) !== -1) {
+    this.isAlreadyBookmarked = true;
+  } else {
   this.bookmarks.push(this.newVideoID)
-  console.log(this.bookmarks)
-
   this.numberOfBookmarks = this.bookmarks.length
+ }
 
+  //save updated bookmarks array to localStorage
   localStorage.setItem("Bookmarks", JSON.stringify(this.bookmarks));
-  console.log(localStorage.getItem("Bookmarks"))
+  
 
 }
 
