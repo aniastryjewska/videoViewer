@@ -8,7 +8,6 @@ import { VideoLink } from 'src/shared/models/video-link-model';
 })
 export class AppComponent {
 
-  videos: VideoLink[] = new Array<VideoLink>();
   newVideoID: string
   bookmarks: string[] = JSON.parse(localStorage.getItem("Bookmarks")) || []
   history = JSON.parse(localStorage.getItem("History")) || []
