@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatInput } from '@angular/material/input';
 import { VideoLink } from 'src/shared/models/video-link-model';
 
 @Component({
@@ -20,7 +21,7 @@ export class SearchBarComponent implements OnInit {
  onSubmit (form: NgForm) {
  console.log(form)
  this.formSubmit.emit(form.value);
- this.video.link = "";
+ form.reset();
 
 }
 
