@@ -5,6 +5,7 @@
     <span>No. of bookmarks in your localStorage: {{numberOfBookmarks}}</span>
     <div *ngIf="!isShow">
         <mat-card>
+            <div *ngIf="numberOfBookmarks===0">There are currently no bookmarks.</div>
             <div *ngFor="let bookmark of bookmarks" >
             <mat-icon color="accent">bookmark_border</mat-icon>
         {{bookmark}}

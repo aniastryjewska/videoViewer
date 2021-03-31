@@ -31,7 +31,7 @@ addVideo(newVideo: VideoLink){
   //saving extracted youtube VideoID to newVideo object
    newVideo.link = this.newVideoID
 
-  //adding newVideo to array of watched videos --- WHY???????
+  //adding newVideo to array where videos submitted through the form are stored
   this.videos.push(newVideo);
   console.log("This is videos array:", this.videos)
 
