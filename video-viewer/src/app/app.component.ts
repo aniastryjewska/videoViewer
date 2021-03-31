@@ -35,14 +35,16 @@ addVideo(newVideo: VideoLink){
 
   //adding updated history to localStorage
   localStorage.setItem("History", JSON.stringify(this.history));
-
 }
 
-childEvent(element){
+playVideoFromHistory(element){
   console.log(element)
   
   //updating history with the clicked element
   this.history.push(element);
+
+  //updating newVideoID to enable bookmarking of the clicked element
+  element.link = this.newVideoID
 
   //adding updated history to localStorage
   localStorage.setItem("History", JSON.stringify(this.history));
