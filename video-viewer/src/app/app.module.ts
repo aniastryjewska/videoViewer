@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookmarksComponent } from './Bookmarks/Bookmarks.component';
 import { HistoryComponent } from './history/history.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchBarComponent } from './searchBar/searchBar.component';
 import { VideoviewComponent } from './videoView/videoView.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';

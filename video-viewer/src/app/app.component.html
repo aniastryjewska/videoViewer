@@ -2,12 +2,12 @@
 
 <div class="page-body"> 
     <span>
-        <app-history [history]="history"></app-history>
+        <history [history]="history"></history>
     </span>
     <span class="videoViewer-main">
-       <app-search-bar class="search-bar" (formSubmit)="addVideo($event)" ></app-search-bar>
-       <app-videoview [videos]="videos" class="video-view"></app-videoview>
-       <app-bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks" [numberOfBookmarks]="numberOfBookmarks"></app-bookmarks>
+       <searchBar class="search-bar" (formSubmit)="addVideo($event)" ></searchBar>
+       <videoView [videos]="videos" class="video-view"></videoView>
+       <bookmarks class="bookmarks"[newVideoID]="newVideoID" [bookmarks]="bookmarks" [numberOfBookmarks]="numberOfBookmarks"></bookmarks>
     </span>
 </div>
 <span class="footer">
